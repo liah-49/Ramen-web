@@ -1,0 +1,222 @@
+:root {
+    --colorfondo:rgb(195,1,36);
+    --crema:rgb(255,203,151)
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: white;
+    color: white;
+   overflow-x: clip;
+   font-family:Inter;
+}
+/* MAQUETACIÓN MENU NAV  */
+#menu {
+    position: fixed;
+    top: 0;
+    position: sticky;
+    z-index: 1000;
+    
+}
+#menu ul {
+ background-color: black;
+ display: flex;
+ list-style: none;
+ padding: 1rem 2rem;
+ justify-content: space-around;
+ align-items: center;
+ 
+}
+#menu a {
+ 
+ font-size: 1.1rem;
+ text-decoration: none;
+ color: white;
+  
+}
+#menu img {
+    width: 60px;
+    display: block;
+ 
+}
+/* MAQUETACIÓN INICIO */
+#inicio {
+    background-color: var(--colorfondo);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-bottom: 14rem;
+}
+.logorm {
+    padding-top: 6rem;
+}
+.plato {
+    position: relative;
+    height: 100%;
+}
+.fondorm {
+    z-index: 1;
+    position: absolute;
+    top: -100px;
+    right: -750px;
+    transform: translate(-50%);
+    width: 900px;
+  
+}
+.ramtern {
+    position: absolute;
+    top: 1%;
+    right: -60%;
+    z-index: 2;
+    width: 900px;
+
+}
+#inicio p {
+    max-width: 700px;
+    padding-left: 8rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    text-align: center;
+    font-size: 1.4rem;
+  
+}
+.boton {
+    background-color: var(--crema);
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.8rem 1.6rem;
+    border-radius: 1rem;
+    align-self: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+
+   
+}
+.boton {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    
+}
+
+
+
+/* MAQUETACION NOVEDADES  */
+#novedades {
+   
+    overflow: hidden;
+    position: relative;
+
+}
+.fondond {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    object-fit: fill;
+    width: 55%;
+    height: auto;
+}
+.textoimagen, .textoimagen1, .textoimagen2, .textoimagen3 {
+    display: flex;
+   align-items: center;
+    z-index: 1;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.textoimagen1, .textoimagen3 {
+    flex-direction: row;
+}
+.textoimagen, .textoimagen2 {
+    flex-direction: row-reverse;
+}
+.titulonov {
+    display:block;
+    margin: 0 auto;
+    padding-top: 4rem;
+
+}
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 4rem 5% 0;
+}
+.figura, .figura1, .figura2, .figura3  {
+    flex: 0 0 50%;
+    
+}
+.figura img, .figura1 img, .figura2 img, .figura3 img {
+   display: block;
+   width: 80%;
+}
+
+.figura1 img, .figura3 img {
+   margin-left: 6rem;
+}
+.texto, .texto1, .texto2, .texto3 {
+ flex: 1;
+ max-width: 400px;
+ font-size: 1.4rem;
+ text-align: center;
+}
+.texto h3, .texto1 h3, .texto2 h3, .texto3 h3 {
+  
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+}
+.texto1, .texto3 {
+    color: black;
+  
+}
+.figura img,
+.figura1 img,
+.figura2 img,
+.figura3 img {
+    animation: girar 20s linear infinite;
+}
+
+@keyframes girar {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+/* MAQUETACION MENU */
+#carta {
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 6rem;
+
+}
+.titulomenu img {
+    
+    display: block;
+    width: 30%;
+    max-width: 250px;
+    margin: 0 auto;
+
+}
+#carta p {
+    
+    max-width: 500px;
+    margin: 5.5rem auto 7rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+
+}
+.chico {
+    position: absolute;
+    left: 0;
+    top: 12%;
+    width: 30%;
+    z-index: 1;
+}
