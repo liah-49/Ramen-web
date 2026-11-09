@@ -200,23 +200,31 @@ body {
 .titulomenu img {
     
     display: block;
-    width: 30%;
+    width: 10%;
     max-width: 250px;
     margin: 0 auto;
 
 }
 #carta p {
     
-    max-width: 500px;
+    max-width: 750px;
     margin: 5.5rem auto 7rem;
     padding: 0 1rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
 
 }
-.chico {
+.chicfid {
+    position: absolute;
+    width: 1660px;
+    left: -24.5rem;
+    top: 7rem;
+}
+/* maquetacion slideshow */
+.carrusel {
     position: absolute;
     left: 0;
-    top: 12%;
-    width: 30%;
-    z-index: 1;
+    right: 0;
+    top: 40%;
+    height: 330px;
+    z-index: 3;
 }
