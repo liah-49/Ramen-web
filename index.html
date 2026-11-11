@@ -6,9 +6,10 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <link href="../css/style.css" rel="stylesheet">
      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+     <link rel="index" href="indexmenu.html">
+      <link   rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     </head>
     
     <body>
@@ -21,16 +22,16 @@
                  <img src="../img/logopeque.svg" alt="shiromenu"></a>
                 </li>
                 <li class="menunov">
+                    <a href="#inicio">INICIO</a>
+                </li>
+                <li class="menuMENU">
                     <a href="#novedades">NOVEDADES</a>
                 </li>
                 <li class="menuMENU">
                     <a href="#menu">MENÚ</a>
                 </li>
-                <li class="menuMENU">
-                    <a href="#menu">MENÚ</a>
-                </li>
                    <li class="menuMENU">
-                    <a href="#menu">MENÚ</a>
+                    <a href="indexmenu.html">PLATOS</a>
                 </li>
            </ul> 
         </nav>
@@ -38,14 +39,14 @@
            
             <div class="contenido">
                 <figure><img  class="logorm" src="../img/logoramen.svg" ></figure>
-                   <p>
+                   <p data-aos="fade-up" data-aos-delay="100" >
                       ¡Bienvenidos a Shiro Ramen! Somos mucho más que un restaurante: somos una explosión de sabores, colores y personalidad.
                       Fusionamos la tradición japonesa con un toque moderno, creativo y sin reglas. Aquí cada bol
                        es una experiencia, cada ingrediente cuenta y cada visita se convierte en una fiesta para 
                        los sentidos. ¿Te atreves a probar algo diferente?
                    </p>
-                <a href="#carta" class="boton">
-                    VER CARTA
+                <a href="indexmenu.html" class="boton">
+                    VER PLATOS
                 </a>    
             </div>
             <div class="plato">
@@ -63,7 +64,7 @@
                <div class="textoimagen">
                     <div class="texto">
                         <h3>Ramen Pollo</h3>
-                        <p>
+                        <p data-aos="fade-up" data-aos-delay="100" >
                          Un ramen cremoso con pollo a la plancha, acompañado de edamame, raíz de loto,
                           setas enoki y huevo marinado. Una combinación llena de texturas y sabores.
                         </p>
@@ -73,7 +74,7 @@
                <div class="textoimagen1">
                     <div class="texto1">
                         <h3>Ramen Ternera</h3>
-                        <p>
+                        <p data-aos="fade-up" data-aos-delay="100" >
                         Lorem ipsum La historia de TASCHEN se remonta a 1980, cuando Benedikt Taschen,
                             un joven aficionado a la lectura, fundó una pequeña tienda de
                             cómics de 23 m² en Colonia, Alemania, un día antes de cumplir 19
@@ -85,7 +86,7 @@
                 <div class="textoimagen2">
                     <div class="texto2">
                         <h3>Ramen Cerdo</h3>
-                        <p>
+                        <p data-aos="fade-up" data-aos-delay="100" >
                        Un delicioso ramen de caldo cremoso con una generosa pieza de cerdo asado, 
                        fideos, huevo marinado, bambú, setas y cebolleta fresca.
                         </p>
@@ -95,7 +96,7 @@
                 <div class="textoimagen3">
                     <div class="texto3">
                         <h3>Ramen Marisco</h3>
-                        <p>
+                        <p data-aos="fade-up" data-aos-delay="100" >
                          Una explosión de sabor a mar con gambas, almejas, vieiras y calamar,
                          acompañados de setas y huevo marinado sobre un caldo cremoso.
                         </p>
@@ -112,37 +113,74 @@
             <figure class="chicfid"><img src="img/chicfid.svg" alt=""></figure>
           
         
-            <div class="carrusel">
-                <button class="flechizq" aria-label="Anterior">&#10094;</button>
+                <div class="carrusel">
+                    <button  type="button" class="flechizq" aria-label="Anterior">&#10094;</button>
 
-                <div class="tarjetas">
-                    <div class="plato"data-nombre="Entrantes">
-                        <img src="img/gyozas.png" alt="gyozas">
+                    <div class="tarjetas">
+                        <div class="platotar" data-nombre="Entrantes">
+                            <img src="img/gyozas.png" alt="gyozas">
+                        </div>
+                        <div class="platotar" data-nombre="Ramen">
+                            <img src="img/ramencerdo.png" alt="ramencerdo">
+                        </div>
+                        <div class="platotar" data-nombre="Postres">
+                            <img src="img/mochi.png" alt="mochis">
+                        </div>
+                        <div class="platotar" data-nombre="Bebidas">
+                            <img src="img/sake.png" alt="sake">
+                        </div>
                     </div>
-                    <div class="plato"data-nombre="Ramen">
-                        <img src="img/ramencerdo.png" alt="ramencerdo">
-                    </div>
-                    <div class="plato"data-nombre="Postres">
-                        <img src="img/ramencerdo.png" alt="mochis">
-                    </div>
-                    <div class="plato"data-nombre="Bebidas">
-                        <img src="img/mochi.png" alt="sake">
+
+                    <button type="button" class="flechder" aria-label="Siguiente">&#10095;</button>
+                    <div class="info">
+                        <h3><a href="Entrantes"></a></h3>
                     </div>
                 </div>
-
-                <button class="flechder" aria-label="Siguiente">&#10095;</button>
-                <div class="info">
-                    <h3><a href="#"></a></h3>
-                </div>
-
-               
-                
-                
-               
-                
-
-            </div>
 
         </section>
-
+        <footer>
+            <div class="footercol">
+                <h3>SOCIAL</h3>
+                <ul>
+                     <li>
+                    <a href="https://www.instagram.com/">INSTAGRAM</a>
+                </li>
+                <li>
+                <a href="https://www.tiktok.com/">TIKTOK</a>
+                </li>
+                <li>
+                    <a href="https://x.com/">X</a>
+                </li> 
+                <li>
+                    <a href="https://www.youtube.com"> YOUTUBE</a>
+                </li>  
+                </ul>
+            </div>
+            <div class="footercol">
+                <h3>CONTACTO </h3>
+                <ul>
+                     <li>
+                    <a href="#ediciones">+34 564 67 94 13</a>
+                    </li>
+                    <li>
+                        <a href="#merch">C/ HONDURAS 17</a>
+                    </li>
+                    <li>
+                        <a href="#colaboradores">MADRID 28016 </a>
+                    </li>
+                    <li>
+                        <a href="#tickets">SHIRO RAMEN</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footercorr">
+                <p>
+                    CUENTANOS LO QUE PIENSAS
+                </p>
+                <a class="footer-correo" href="mailto:shiroramen@gmail.com">CORREO</a>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="js/script.js"></script>
     </body>
