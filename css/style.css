@@ -50,6 +50,7 @@ body {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     padding-bottom: 14rem;
+     overflow: hidden;
 }
 .logorm {
     padding-top: 6rem;
@@ -57,27 +58,34 @@ body {
 .plato {
     position: relative;
     height: 100%;
+    
 }
-.fondorm {
-    z-index: 1;
+.plato figure {
     position: absolute;
-    top: -90px;
-    right: -746px;
-    transform: translate(-50%);
-    width: 900px;
-  
+    top: 0;
+    left: 0;
+    width: 100%;
 }
-.ramtern {
-    position: absolute;
-    top: 1%;
-    right: -60%;
-    z-index: 2;
-    width: 900px;
+.plato img {
+    display: block;
+    width: 200%;
+    top: -80px;
+   
+}
 
+.fondorm,
+.ramtern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 .ramtern {
+    margin-top: 7.1rem;
+    margin-left: 0.4rem;
     animation: girar 20s linear infinite;
 }
+
 
 @keyframes girar {
     from { transform: rotate(0deg); }
@@ -410,10 +418,11 @@ body {
 .cards {
     background-color: var(--colorfondo);
  }
-.carteles {
-    color: black;
+.nombres {
+   background-color: black;
     margin: 0 auto;
     text-align: center;
+    color: #000;
 }
 .filtro {
   
@@ -490,4 +499,16 @@ footer ul {
     background-color: #000;
     color: var(--rosa);
     text-decoration: none;
+}
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES  */
+@media (max-width: 1213px) {
+ 
 }
