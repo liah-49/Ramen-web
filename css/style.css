@@ -50,7 +50,7 @@ body {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     padding-bottom: 14rem;
-     overflow: hidden;
+    overflow: hidden;
 }
 .logorm {
     padding-top: 6rem;
@@ -154,7 +154,14 @@ body {
 .titulonov {
     display:block;
     margin: 0 auto;
-    padding-top: 4rem;
+    padding-top: 2rem;
+
+}
+.titulonov2 {
+    display:block;
+    margin: 0 auto;
+    padding-top: 2rem;
+    display: none;
 
 }
 
@@ -510,5 +517,254 @@ footer ul {
 
 /* MEDIA QUERIES  */
 @media (max-width: 1213px) {
+ .ramtern {
+    margin-top: 6rem;
+    margin-left: 0.4rem;
+    animation: girar 20s linear infinite;
+  }
+}
+@media (max-width: 1136px) {
+ .ramtern {
+    margin-top: 4.9rem;
+    margin-left: 0.4rem;
+    animation: girar 20s linear infinite;
+  }   
+}
+@media (max-width: 1100px) {
+    #inicio {
+        grid-template-columns: 1fr;  
+        padding-bottom: 3rem;
+    }
+
+    .logorm {
+            display: block;
+            width: 90%;
+            padding-top: 2rem;
+        }
+
+    #inicio p {
+            max-width: 100%;
+            padding: 1.5rem 1.5rem 2rem;   
+            font-size: 2rem;
+        }
+
+    
+    .plato {
+            position: relative;
+            width: 100%;
+            height: 95vw;                 
+            margin-top: 2rem;
+            
+        }
+    .plato img {
+            display: block;
+            width: 100%;
+            top: -10px;
+    
+        }
+    .ramtern {
+            margin-top: 7.2rem;
+            margin-left: 0.8rem;
+            animation: girar 20s linear infinite;
+    } 
+    .conjuntoplato {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);   
+            width: 90%;
+        }
+    .boton {
+        background-color: var(--crema);
+        color: black;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 0.8rem 1.6rem;
+        border-radius: 3rem;
+        align-self: center;
+        font-weight: bold;
+        font-size: 2rem;
+
+    
+    }
+    .boton {
+        display: block;
+        width: fit-content;
+        margin-top: 3rem; 
+    }
+}
+@media (max-width: 959px) {
+  .texto, .texto1, .texto2, .texto3 {
+ flex: 1;
+ max-width: 320px;
+ font-size: 1.2rem;
+ text-align: center;
+}
+.texto h3, .texto1 h3, .texto2 h3, .texto3 h3 {
+  
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+}  
+}
+@media (max-width: 894px) {
+    .ramtern {
+        margin-top: 5.7rem;
+        margin-left: 0.8rem;
+        animation: girar 20s linear infinite;
+    } 
+}
+@media (max-width: 890px) {
+    .titulonov {
+    display:block;
+    margin: 0 auto;
+    padding-top: 2rem;
+    width: 80%;
+
+}
+}
+@media (max-width: 782px) {
+     .texto, .texto1, .texto2, .texto3 {
+ flex: 1;
+ max-width: 290px;
+ font-size: 1.1rem;
+ text-align: center;
+}
+.texto h3, .texto1 h3, .texto2 h3, .texto3 h3 {
+  
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+}  
+} 
+
+@media (max-width: 782px) {
+    .ramtern {
+        margin-top: 5.2rem;
+        margin-left: 0.8rem;
+        animation: girar 20s linear infinite;
+    } 
+}
+@media (max-width: 750px) {
+.fondond {
+    display: none;
+}
+.titulonov {
+    display: none;
+}
+.titulonov2 {
+    display:block;
+    margin: 0 auto;
+    padding-top: 2rem;
+     width: 80%;
+}
+.todo {
+    padding: 0;
+}
+.textoimagen,
+ .textoimagen1,
+  .textoimagen2,
+   .textoimagen3 {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 1.5rem;
+}
+.textoimagen,
+.textoimagen2 {
+    background-color: white;
+}
+.textoimagen1,
+.textoimagen3 {
+   background-color: var(--colorfondo);
+}
+.texto, .texto2 {
+     font-size: 2rem;
+ max-width: 600px;
+    color: black;
+}
+.texto1, .texto3 {
+ color: white;
+ font-size: 2rem;
+ max-width: 600px;
  
+}
+.figura img, .figura2 img {
+    margin-left: 4rem;
+}
+.figura1 img, .figura3 img {
+   margin-left: 4rem;
+}
+}
+
+@media (max-width: 677px) {
+    .ramtern {
+        margin-top:4.4rem;
+        margin-left: 0.6rem;
+        animation: girar 20s linear infinite;
+    } 
+        #inicio p {
+            max-width: 100%;
+            padding: 1.5rem 1.5rem 2rem;   
+            font-size: 1.6rem;
+        }
+    .boton {
+        background-color: var(--crema);
+        color: black;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 0.8rem 1.6rem;
+        border-radius: 3rem;
+        align-self: center;
+        font-weight: bold;
+        font-size: 1.5rem;
+
+    
+    }
+}
+@media (max-width: 547px) {
+    .ramtern {
+        margin-top:3.5rem;
+        margin-left: 0.6rem;
+        animation: girar 20s linear infinite;
+    } 
+    #inicio p {
+        max-width: 100%;
+        padding: 1.5rem 1.5rem 2rem;   
+        font-size: 1.5rem;
+    }
+    .figura img, .figura2 img {
+    margin-left: 3rem;}
+
+ .figura1 img, .figura3 img {
+      margin-left: 3rem;
+ }
+ .texto, .texto2 {
+     font-size: 1.4rem;
+ max-width: 600px;
+    color: black;
+}
+.texto1, .texto3 {
+ color: white;
+ font-size: 1.4rem;
+ max-width: 600px;
+ 
+}
+
+}
+@media (max-width: 430px) {
+    .ramtern {
+        margin-top:2.8rem;
+        margin-left: 0.4rem;
+        animation: girar 20s linear infinite;
+    } 
+    #inicio p {
+        max-width: 100%;
+        padding: 1.5rem 1.5rem 2rem;   
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 346px) {
+    .ramtern {
+        margin-top:2.2rem;
+        margin-left: 0.4rem;
+        animation: girar 20s linear infinite;
+    }   
 }
