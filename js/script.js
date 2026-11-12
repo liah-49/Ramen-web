@@ -66,3 +66,25 @@
     mostrar(0);
 
 });
+
+if (window.feather) feather.replace();
+var hamburguesa = document.querySelector(".hamburger");
+var menu = document.querySelector("#menu");
+var cerrar = document.querySelector(".menuhbg-cerrar");
+
+if (hamburguesa && menu) {
+    hamburguesa.addEventListener("click", function () {
+        menu.classList.toggle("active");
+    })
+}
+if (cerrar && menu) {
+    cerrar.addEventListener("click", function () {
+        menu.classList.remove("active")
+    })
+}
+
+document.querySelectorAll("menuhbg a").forEach(function (enlace) {
+    enlace.addEventListener("click", function () {
+        menu.classList.remove("active")
+    })
+})

@@ -18,9 +18,9 @@ body {
 #menu {
     position: fixed;
     top: 0;
-    position: sticky;
+    left: 0;
+    width: 100%;
     z-index: 1000;
-    
 }
 #menu ul {
  background-color: black;
@@ -43,6 +43,17 @@ body {
     display: block;
  
 }
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.menuhbg {
+    display: none;
+}
+
 /* MAQUETACIÓN INICIO */
 #inicio {
     background-color: var(--colorfondo);
@@ -858,6 +869,69 @@ footer ul {
     font-size: 50px;
 } 
 }
+@media (max-width: 600px) {
+.menulink {
+        display: none;
+    }
+
+.hamburger-li {
+    margin-left: auto;
+}
+.hamburger {
+    display: block;
+}
+.menuhbg {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: min(280px, 65vw);
+    height: 240px;
+    padding: 0;
+    background-color: var(--crema);
+    transform: translateX(-105%);
+    visibility: hidden;
+    transition: transform 0.35s ease, visibility 0s linear 0.35s;
+    z-index: 2000;
+}
+#menu.active .menuhbg {
+    transform: translateX(0);
+    visibility: visible;
+    transition: transform 0.35s ease, visibility 0s;
+}
+.menuhbg-cerrar {
+    align-self: flex-start;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: black;
+    cursor: pointer;
+}
+#menu .menuhbg ul {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+    width: 100%;
+    padding: 0;
+    background: none;
+    border-top: 2px solid black;
+}
+#menu .menuhbg li {
+    border-bottom: 2px solid black;
+}
+  #menu .menuhbg a {
+          display: block;
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+        text-align: left;
+        color: black;
+  }
+}
 @media (max-width: 547px) {
     .ramtern {
         margin-top:3.5rem;
@@ -920,7 +994,7 @@ footer ul {
     .menuimg img{
         width: 50%;
     }
-
+}
 
 @media (max-width: 346px) {
     .ramtern {
@@ -929,4 +1003,4 @@ footer ul {
         animation: girar 20s linear infinite;
     }   
 }
-}
+

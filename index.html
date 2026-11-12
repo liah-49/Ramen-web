@@ -21,19 +21,33 @@
                       <a href="#inicio">
                  <img src="../img/logopeque.svg" alt="shiromenu"></a>
                 </li>
-                <li class="menunov">
+                <li class="menulink">
                     <a href="#inicio">INICIO</a>
                 </li>
-                <li class="menuMENU">
+                <li class="menulink">
                     <a href="#novedades">NOVEDADES</a>
                 </li>
-                <li class="menuMENU">
-                    <a href="#menu">MENÚ</a>
+                <li class="menulink">
+                    <a href="#carta">MENÚ</a>
                 </li>
-                   <li class="menuMENU">
+                   <li class="menulink">
                     <a href="platos.html">PLATOS</a>
                 </li>
+                <li class="hamburger-li">
+                    <button type="button" class="hamburger" aria-label="Abrir menú">
+                        <i data-feather="menu"></i>
+                    </button>
+                </li>
            </ul> 
+           <div class="menuhbg">
+            <button type="button" class="menuhbg-cerrar" aria-label="Cerrar menú">X</button>
+            <ul>
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#novedades">NOVEDADES</a></li>
+                <li><a href="#carta">MENÚ</a></li>
+                <li><a href="platos.html">PLATOS</a></li>
+            </ul>
+           </div>
         </nav>
         <header id="inicio">
            
@@ -189,5 +203,6 @@
         </footer>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://unpkg.com/feather-icons"></script>
         <script src="js/script.js"></script>
     </body>

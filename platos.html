@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estéticas · Menú y acordeón con jQuery</title>
-    <link rel="stylesheet" href="css/style.css">
-
-</head>
+ <head>
+        
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="../css/style.css" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">>
+      <link   rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    </head>>
 <body>
-    <nav id="menu">
-            
-        <ul>   
-            <li class="shiromenu">
-                    <a href="index.html">
-                <img src="../img/logopeque.svg" alt="shiromenu"></a>
-            </li>
-            <li class="menunov">
-                <a href="#novedades">NOVEDADES</a>
-            </li>
-            <li class="menuMENU">
-                <a href="#menu">MENÚ</a>
-            </li>
-            <li class="menuMENU">
-                <a href="#menu">MENÚ</a>
-            </li>
-                <li class="menuMENU">
-                <a href="#menu">MENÚ</a>
-            </li>
-        </ul> 
-    </nav>
+            <nav id="menu">
+             
+           <ul>
+              
+                <li class="shiromenu">
+                      <a href="index.html">
+                 <img src="../img/logopeque.svg" alt="shiromenu"></a>
+                </li>
+                <li class="menulink">
+                    <a href="index.html">INICIO</a>
+                </li>
+                <li class="menulink">
+                    <a href="index.html #novedades">NOVEDADES</a>
+                </li>
+                <li class="menulink">
+                    <a href="#carta">MENÚ</a>
+                </li>
+                   <li class="menulink">
+                    <a href="platos.html">PLATOS</a>
+                </li>
+                <li class="hamburger-li">
+                    <button type="button" class="hamburger" aria-label="Abrir menú">
+                        <i data-feather="menu"></i>
+                    </button>
+                </li>
+           </ul> 
+           <div class="menuhbg">
+            <button type="button" class="menuhbg-cerrar" aria-label="Cerrar menú">X</button>
+            <ul>
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#novedades">NOVEDADES</a></li>
+                <li><a href="#carta">MENÚ</a></li>
+                <li><a href="platos.html">PLATOS</a></li>
+            </ul>
+           </div>
+        </nav>
     <section id="platosnom">
         <div class="inicio">
             <figure class="platonom"> <img src="img/PLATOS.svg" alt=""></figure>
-            <p> Aquí tenemos nuestro catálogo de paltos al completo con susu respectivos
+            <p> Aquí tenemos nuestro catálogo de paltos al completo con sus respectivos
             precios, ordenados por categoría.
             </p>
         </div>
@@ -143,5 +161,9 @@
             <a class="footer-correo" href="mailto:info@lollapalooza.com">CORREO</a>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="js/script.js"></script>
        
 </body>
