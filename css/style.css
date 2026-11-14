@@ -9,7 +9,7 @@
     scroll-behavior: smooth;
 }
 body {
-    background-color: white;
+    background-color: black;
     color: white;
    overflow-x: clip;
    font-family:Inter;
@@ -44,11 +44,15 @@ body {
  
 }
 .hamburger {
+    
     display: none;
     background: none;
     border: none;
     color: white;
     cursor: pointer;
+}
+.hamburger-li {
+    display: none;
 }
 .menuhbg {
     display: none;
@@ -138,7 +142,8 @@ body {
    
     overflow: hidden;
     position: relative;
-
+ background-color: white;
+ z-index: -1;
 }
 .fondond {
     position: absolute;
@@ -155,6 +160,7 @@ body {
     z-index: 1;
     justify-content: space-between;
     gap: 1rem;
+    
 }
 .textoimagen1, .textoimagen3 {
     flex-direction: row;
@@ -931,6 +937,11 @@ footer ul {
 } 
 }
 @media (max-width: 600px) {
+    .hamburger-li {
+        display: block;
+    }
+}
+@media (max-width: 600px) {
 .menulink {
         display: none;
     }
@@ -1064,4 +1075,6 @@ footer ul {
         animation: girar 20s linear infinite;
     }   
 }
+
+
 
