@@ -1,37 +1,4 @@
-// var items = document.querySelectorAll('.carrusel, .item');
-// var total = items.length;
-// var info =  document.querySelector('.carrusel, .info');
-// var titulo = info.querySelector('h3, a');
-// var desc = info.querySelector('p'); 
-// var actual= 1;
 
-// function render() {
-//     items.forEach(function(item) {
-//         item.classList.remove('activo', 'prev', 'next');
-//     })
-//     items[actual].classList.add('activo');
-//     items[(actual - 1 + total) % total].classList.add('prev');
-//     items[(actual + 1) % total].classList.add('next');
-// }
-// var a = items[actual];
-// info.classList.add('oculto');
-// setTimeout(function() {
-//     titulo.textContent = a.dataset.nombre;
-//     titulo.href = a.dataset.enlace;
-//     desc.textContent = a.dataset.desc;
-//     info.classList.remove('oculto');
-// })
-// document.querySelector('.flechder').addEventListener('click', function () {
-//     actual = (actual + 1) % total;
-//     render();
-// });
-
-// document.querySelector('.flechizq').addEventListener('click', function () {
-//     actual = (actual - 1 + total) % total;
-//     render();
-// });
-
-// render();
   AOS.init( {
    duration:900 
   })
@@ -41,6 +8,8 @@
     var nombre = $(".info a");
     var total = tarjetas.length;
     var actual = 0;
+
+    if (total === 0) return;
 
     function mostrar(n) {
         actual = (n + total) % total;
@@ -68,6 +37,7 @@
 });
 
 if (window.feather) feather.replace();
+
 var hamburguesa = document.querySelector(".hamburger");
 var menu = document.querySelector("#menu");
 var cerrar = document.querySelector(".menuhbg-cerrar");
@@ -90,9 +60,9 @@ document.querySelectorAll("menuhbg a").forEach(function (enlace) {
 })
 
 var platos = [
-    { nombre: "Ramen Cerdo",   categoria: "Ramen",     imagen: "img/tarjram1.png", precio: "12.50€" },
-    { nombre: "Gyozas",        categoria: "Entrantes", imagen: "img/tarjap1.png",  precio: "4.50€" },
-    { nombre: "Takoyaki",      categoria: "Entrantes", imagen: "img/tarjap2.png",  precio: "3.90€" },
+    { nombre: "Ramen Cerdo",   categoria: "Ramen",     imagen: "img/tarjram1.png", precio: "12.50€", descripcion: "Caldo de cerdo con fideos, huevo y cebolleta." },
+    { nombre: "Gyozas",        categoria: "Entrantes", imagen: "img/tarjap1.png",  precio: "4.50€",  descripcion: "Empanadillas japonesas a la plancha."},
+    { nombre: "Takoyaki",      categoria: "Entrantes", imagen: "img/tarjap2.png",  precio: "3.90€",  descripcion: "Bolitas de pulpo con salsa especial." },
     { nombre: "Salmón",        categoria: "Entrantes", imagen: "img/tarjap3.png",  precio: "5.10€" },
     { nombre: "Onigiri",       categoria: "Entrantes", imagen: "img/tarjap4.png",  precio: "5.50€" },
     { nombre: "Ramen Marisco", categoria: "Ramen",     imagen: "img/tarjram2.png", precio: "13.50€" },
@@ -108,57 +78,9 @@ var platos = [
     { nombre: "Mochi",         categoria: "Postres",   imagen: "img/tarjpos3.png", precio: "4.50€" }
 ];
 var contenedor = document.querySelector("#cards")
+var modal = document.querySelector("#modal");
+var ultimaTarjeta = null;
 
-if (contenedor) {
-    var botones = document.querySelectorAll(".filtro");
 
-    function pintar(lista) {
-        contenedor.innerHTML = "";
 
-        lista.forEach(function (plato) {
-            var tarjeta = document.createElement("div");
-            tarjeta.className = "plato-card";
-            tarjeta.innerHTML =
-                '<div class="plato-img">' +
-                    '<img src="' + plato.imagen + '" alt="' + plato.nombre + '">' +
-                '</div>' +
-                '<p class="plato-nombre">' + plato.nombre + '</p>' +
-                '<p class="plato-precio">' + plato.precio + '</p>';
-            contenedor.appendChild(tarjeta);
-        });
-    }
-
-    function filtrar(categoria) {
-        if (categoria === "Todos") {
-            pintar(platos);
-        } else {
-            pintar(platos.filter(function (plato) {
-                return plato.categoria === categoria;
-            }));
-        }
-    }
-
-    botones.forEach(function (boton) {
-        boton.addEventListener("click", function () {
-            botones.forEach(function (b) {
-                b.classList.remove("is-activo");
-            });
-            boton.classList.add("is-activo");
-            filtrar(boton.dataset.categoria);
-        });
-    });
-
-    pintar(platos);
-}
-function filtrar(categoria) {
-    contenedor.classList.toggle("dos-col", categoria !== "Todos");
-
-    if (categoria === "Todos") {
-        pintar(platos);
-    } else {
-        pintar(platos.filter(function (plato) {
-            return plato.categoria === categoria;
-        }));
-    }
-}
 
