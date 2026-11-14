@@ -98,7 +98,7 @@ var platos = [
     { nombre: "Ramen Ternera", categoria: "Ramen",     imagen: "img/tarjram3.png", precio: "13.00€" },
     { nombre: "Ramen Pollo",   categoria: "Ramen",     imagen: "img/tarjram4.png", precio: "11.50€" },
     { nombre: "Sake",          categoria: "Bebidas",   imagen: "img/tarjbeb1.png", precio: "5.00€" },
-    { nombre: "Cerveza",       categoria: "Bebidas",   imagen: "img/tarJbeb2.png",  precio: "3.50€" },
+    { nombre: "Cerveza",       categoria: "Bebidas",   imagen: "img/tarjbeb2.png",  precio: "3.50€" },
     { nombre: "Refrescos",     categoria: "Bebidas",   imagen: "img/tarjbeb3.png", precio: "2.50€" },
     { nombre: "Agua",          categoria: "Bebidas",   imagen: "img/tarjbeb4.png", precio: "2.00€" },
     { nombre: "Dorayaki",      categoria: "Postres",   imagen: "img/tarjpos1.png", precio: "4.50€" },
