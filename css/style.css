@@ -419,7 +419,7 @@ body {
 /* MAQUETACION PLATOS */
 #platosnom {
     background-color: #000;
-    padding-top: 5rem;              /* hueco para el menú fijo */
+    padding-top: 5rem;             
 }
 .platonom {
     display: flex;
@@ -473,14 +473,14 @@ body {
     width: 100%;
 }
 .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1.2rem;
     max-width: 1000px;
     margin: 0 auto;
     padding: 2rem 7% 5rem;
     background-color: var(--colorfondo);
-    align-items: center;
 }
 .plato-card {
     display: flex;
@@ -491,8 +491,14 @@ body {
     border-radius: 1.2rem;
     text-align: center;
     color: black;
+     width: calc((100% - 2.4rem) / 3);
 }
-/* Caja de imagen de tamaño fijo: todas las tarjetas miden lo mismo */
+.cards.dos-col {
+    max-width: 700px;
+}
+.cards.dos-col .plato-card {
+    width: calc((100% - 1.2rem) / 2);
+}
 .plato-img {
     display: flex;
     align-items: center;
@@ -509,6 +515,7 @@ body {
     object-fit: contain;
     filter: drop-shadow(12px 4px 8px rgba(0, 0, 0, 0.25));
 }
+
 .plato-nombre {
     font-weight: 800;
     font-size: 0.9rem;
@@ -749,6 +756,9 @@ footer ul {
 .platotar.der {
     transform: translate(calc(-50% + 250px), -50%) scale(0.7);
 }
+}
+@media (max-width: 900px) {
+    .plato-card { width: calc((100% - 1.2rem) / 2); } /* 2 por fila */
 }
 @media (max-width: 894px) {
     .ramtern {
@@ -1050,7 +1060,8 @@ footer ul {
     .footercorr p {
        max-width: none;
     }
-
+  .cards { max-width: 300px; }
+    .plato-card { width: 100%; }
 }
 @media (max-width: 430px) {
     .ramtern {
@@ -1075,6 +1086,11 @@ footer ul {
         animation: girar 20s linear infinite;
     }   
 }
-
+@media (max-width: 450px) {
+    .cards,
+    .cards.dos-col { max-width: 300px; }
+    .plato-card,
+    .cards.dos-col .plato-card { width: 100%; }
+}
 
 

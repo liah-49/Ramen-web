@@ -94,6 +94,7 @@ var platos = [
     { nombre: "Gyozas",        categoria: "Entrantes", imagen: "img/tarjap1.png",  precio: "4.50€" },
     { nombre: "Takoyaki",      categoria: "Entrantes", imagen: "img/tarjap2.png",  precio: "3.90€" },
     { nombre: "Salmón",        categoria: "Entrantes", imagen: "img/tarjap3.png",  precio: "5.10€" },
+    { nombre: "Onigiri",       categoria: "Entrantes", imagen: "img/tarjap4.png",  precio: "5.50€" },
     { nombre: "Ramen Marisco", categoria: "Ramen",     imagen: "img/tarjram2.png", precio: "13.50€" },
     { nombre: "Ramen Ternera", categoria: "Ramen",     imagen: "img/tarjram3.png", precio: "13.00€" },
     { nombre: "Ramen Pollo",   categoria: "Ramen",     imagen: "img/tarjram4.png", precio: "11.50€" },
@@ -148,4 +149,15 @@ if (contenedor) {
     });
 
     pintar(platos);
+}
+function filtrar(categoria) {
+    contenedor.classList.toggle("dos-col", categoria !== "Todos");
+
+    if (categoria === "Todos") {
+        pintar(platos);
+    } else {
+        pintar(platos.filter(function (plato) {
+            return plato.categoria === categoria;
+        }));
+    }
 }
