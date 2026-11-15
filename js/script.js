@@ -173,3 +173,21 @@
             if (tarjeta) tarjeta.click();
         });
     }
+
+    /*BANNER DE COOKIES */
+var cookieBanner = document.querySelector("#cookieBanner");
+var cookieAccept = document.querySelector("#cookieAccept");
+var cookieReject = document.querySelector("#cookieReject");
+
+if (cookieBanner) {
+    setTimeout(function () {
+        cookieBanner.style.display = "block";
+    }, 600);
+
+    function cerrarBanner() {
+        cookieBanner.style.display = "none";
+    }
+
+    if (cookieAccept) cookieAccept.addEventListener("click", cerrarBanner);
+    if (cookieReject) cookieReject.addEventListener("click", cerrarBanner);
+}
