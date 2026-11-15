@@ -1,6 +1,6 @@
 :root {
     --colorfondo:rgb(195,1,36);
-    --crema:rgb(255,203,151)
+    --crema:rgb(255,203,151);
 }
 *{
     margin: 0;
@@ -334,133 +334,282 @@ body {
     color: white;
     text-decoration: none;
 }
-/* .carrusel {
-    position: absolute;
+
+/* Estilos del banner de cookies */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
     left: 0;
-    right: 0;
-    top: 40%;
-    height: 330px;
-    z-index: 3;
-}
-.tarjetas {
-    position: relative;
-    height: 100%;
-}
-.item {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    width: 280px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translate(-50%, -50%) scale(0.3);
-    transition: transform 0.5 ease, opacity 0.5s ease;
-}
-.item img {
-    display: block;
     width: 100%;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 1.2rem 2rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    display: none; /* Por defecto está oculto hasta que JS verifique si ya aceptó */
+    font-family: 'Inter', sans-serif;
 }
 
-.item.activo {
- opacity: 1;
- transform: translate(-50%, -50%) scale(1.15);
- z-index: 2;
- 
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
-.item.prev {
+
+.cookie-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    flex: 1;
+    min-width: 280px;
+}
+
+.cookie-content a {
+    color: #ffcb9b; /* O el color crema de tu web */
+    text-decoration: underline;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.cookie-btn {
+    padding: 0.6rem 1.4rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.cookie-btn:hover {
+    transform: translateY(-2px);
+}
+
+.cookie-btn-aceptar {
+    background-color: #c30124; /* El rojo de tu web (var(--colorfondo)) */
+    color: #ffffff;
+}
+
+.cookie-btn-aceptar:hover {
+    background-color: #a0011d;
+}
+
+.cookie-btn-rechazar {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.cookie-btn-rechazar:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+    .cookie-buttons {
+        justify-content: flex-end;
+    }
+}
+
+/* MAQUETACION PLATOS */
+#platosnom {
+    background-color: #000;
+    padding-top: 5rem;
+}
+.platonom {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+.platonom img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+}
+.inicio p {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    max-width: 700px;
+    padding: 0 1rem 3rem;
+}
+
+.nombres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2.5rem 5% 0;
+    background-color: var(--colorfondo);
+}
+.filtro {
+    padding: 0.5rem 2.2rem;
+    margin: 0;
+    font-weight: 800;
+    font-size: 0.9rem;
+    color: black;
+    background-color: var(--crema);
+    border: 2px solid var(--crema);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: border-color 0.25s ease, transform 0.2s ease;
+}
+.filtro:hover { transform: translateY(-2px); }
+.filtro.is-activo { border-color: black; }
+
+#array {
+    background-color: var(--colorfondo);
+    width: 100%;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 7% 5rem;
+    background-color: var(--colorfondo);
+}
+.plato-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2rem 1rem 1.3rem;
+    background-color: white;
+    border-radius: 1.2rem;
+    text-align: center;
+    color: black;
+    width: calc((100% - 2.4rem) / 3);
+    cursor: pointer;
+}
+.plato-card:focus-visible {
+    outline: 3px solid var(--crema);
+    outline-offset: 3px;
+}
+.cards.dos-col { max-width: 700px; }
+.cards.dos-col .plato-card { width: calc((100% - 1.2rem) / 2); }
+.plato-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 140px;
+    margin-bottom: 0.9rem;
+}
+.plato-img img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(12px 4px 8px rgba(0, 0, 0, 0.25));
+}
+.plato-nombre {
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+.plato-precio {
+    margin-top: 0.3rem;
+    font-size: 0.85rem;
+}
+
+/* MODAL */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+.modal.abierto {
     opacity: 1;
-    transform: translate(calc(-50% + 28vw), -50%) scale(0.55);
-    z-index: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s;
 }
-.item.next {
-    opacity: 1;
-    transform: translate(calc(-50% + 28vw), -50%) scale(0.55);
-    z-index: 1;
+.modal-caja {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    padding: 2rem 1.5rem;
+    background: white;
+    color: black;
+    border-radius: 1.2rem;
+    text-align: center;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
 }
-.flechas {
+.modal.abierto .modal-caja { transform: scale(1); }
+.modal-cerrar {
     position: absolute;
-    top: 45%;
-    transform: translateY(-50%);
-    z-index: 5;
+    top: 0.5rem;
+    right: 1rem;
     background: none;
     border: none;
     font-size: 2rem;
-    color: black
-}
-.flechizq { left: 3%; }
-.flechder { right: 3%; }
-.info {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
-}
-.info h3 {
-  font-size: 1.8rem;
-  text-transform: uppercase;
-} */ 
- /* font-size: 0.3rem auto 0;
- padding: 0;
- font-size: 0.9rem; */
-/* .carrusel { outline: 3px solid lime; } */
-
-
-
-
- /* MAQUETACION PLATOS */
-
- #platosnom {
-  background-color: #000;
- }
-.carteles {
-    padding: 3rem;
-    background-color: var(--colorfondo);
-    
- }
-.platonom {
-    
-    padding: 5rem; 
-    display: flex;
-  justify-content: center;
- }
-.inicio p {
-    text-align: center;
-   margin: 0 auto;
-    font-size: 2rem;
-    max-width: 700px;
-    padding-bottom: 3rem;
-} 
-.cards {
-    background-color: var(--colorfondo);
- }
-.nombres {
-   background-color: black;
-    margin: 0 auto;
-    text-align: center;
-    color: #000;
-}
-.filtro {
-  
-    padding: 0.70rem 2.2rem;
-    margin: 1.8rem;
-    font-weight: 650;
-    font-size: 1.3rem;
-    color: var(--color-texto);
-    background-color: var(--crema);
-    border: 2px solid var(--color-texto);
-    border-radius: 999px;
+    line-height: 1;
     cursor: pointer;
-    transition: background-color var(--transicion), color var(--transicion), border-color var(--transicion);
+    color: black;
+}
+.modal-img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+.modal-nombre {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+}
+.modal-desc {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.modal-precio {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--colorfondo);
 }
 
-.filtro:hover {
-    border-color: var(--color-acento);
-}
- 
 
+
+
+@media (max-width: 380px) {
+    .plato-card,
+    .cards.dos-col .plato-card { width: 100%; }
+    .cards,
+    .cards.dos-col { max-width: 280px; }
+}
+
+/* Modal: que no se salga en pantallas pequeñas */
+.modal-caja {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+@media (max-width: 450px) {
+    .modal-img { max-width: 160px; }
+    .modal-nombre { font-size: 1.2rem; }
+}
 
 
 /* MAQUETACION FOOTER  */
@@ -683,6 +832,9 @@ footer ul {
     transform: translate(calc(-50% + 250px), -50%) scale(0.7);
 }
 }
+@media (max-width: 900px) {
+    .plato-card { width: calc((100% - 1.2rem) / 2); }
+}
 @media (max-width: 894px) {
     .ramtern {
         margin-top: 5.7rem;
@@ -869,6 +1021,7 @@ footer ul {
     font-size: 50px;
 } 
 }
+
 @media (max-width: 600px) {
 .menulink {
         display: none;
@@ -931,6 +1084,25 @@ footer ul {
         text-align: left;
         color: black;
   }
+      .cards,
+    .cards.dos-col {
+        max-width: 100%;
+        padding: 1.5rem 1rem 3rem;
+        gap: 0.8rem;
+    }
+    .plato-card,
+    .cards.dos-col .plato-card {
+        width: calc((100% - 0.8rem) / 2);
+        padding: 0.8rem 0.6rem 1rem;
+    }
+    .plato-img {
+         height: 100px; }
+    .filtro {
+        padding: 0.4rem 1.2rem;
+        font-size: 0.8rem;
+    }
+    .inicio p { 
+        font-size: 1.1rem; }
 }
 @media (max-width: 547px) {
     .ramtern {
