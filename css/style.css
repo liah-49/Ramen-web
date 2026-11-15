@@ -9,7 +9,7 @@
     scroll-behavior: smooth;
 }
 body {
-    background-color: white;
+    background-color:#000 ;
     color: white;
    overflow-x: clip;
    font-family:Inter;
@@ -49,6 +49,9 @@ body {
     border: none;
     color: white;
     cursor: pointer;
+}
+.hamburger-li {
+    display: none;
 }
 .menuhbg {
     display: none;
@@ -103,12 +106,12 @@ body {
     to   { transform: rotate(360deg); }
 }
 #inicio p {
-    max-width: 700px;
-    padding-left: 8rem;
+    max-width: 800px;
+    padding-left: 3rem;
     padding-top: 2rem;
     padding-bottom: 4rem;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   
 }
 .boton {
@@ -120,7 +123,7 @@ body {
     border-radius: 1rem;
     align-self: center;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.6rem;
 
    
 }
@@ -135,10 +138,10 @@ body {
 
 /* MAQUETACION NOVEDADES  */
 #novedades {
-   
+   background-color: #ffffff;
     overflow: hidden;
     position: relative;
-
+   z-index: -1;
 }
 .fondond {
     position: absolute;
@@ -592,27 +595,14 @@ body {
 }
 
 
-
-
-@media (max-width: 380px) {
-    .plato-card,
-    .cards.dos-col .plato-card { width: 100%; }
-    .cards,
-    .cards.dos-col { max-width: 280px; }
-}
-
-/* Modal: que no se salga en pantallas pequeñas */
 .modal-caja {
     max-height: 90vh;
     overflow-y: auto;
 }
-@media (max-width: 450px) {
-    .modal-img { max-width: 160px; }
-    .modal-nombre { font-size: 1.2rem; }
-}
 
 
-/* MAQUETACION FOOTER  */
+
+
 footer {
     position: relative;
     overflow: hidden;
@@ -671,6 +661,61 @@ footer ul {
 
 
 
+#footer2 {
+    position: relative;
+    overflow: hidden;
+    background-color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    padding: 2.5rem 2rem;
+    
+}
+.footercol2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+#footer2 h3 {
+    font-family:Inter ;
+    font-size: 1.4rem;
+}
+#footer2 li a {
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: aliceblue;
+}
+#footer2 ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    
+}
+.footercorr2 {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.footercorr2 p {
+  font-family:Inter ;
+  font-size: 1.8rem;
+  line-height: 1.3;
+    text-align: center;
+    max-width: 15rem;
+}
+.footer-correo2 {
+    font-family: Anton, sans-serif;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    background-color:var(--colorfondo);
+    color: var(--rosa);
+    text-decoration: none;
+}
+
 
 
 
@@ -713,7 +758,7 @@ footer ul {
     .logorm {
             display: block;
             width: 90%;
-            padding-top: 2rem;
+            padding-top: 8rem;
         }
 
     #inicio p {
@@ -851,6 +896,14 @@ footer ul {
 
 }
 }
+@media (max-width: 816px) {
+    .footercorr2 p {
+        font-size: 1.4rem;
+    }
+    .footer-correo2 {
+        font-size: 1.4rem;
+    }
+}
 @media (max-width: 799px) {
     footer {
         gap: 4vw;
@@ -972,7 +1025,7 @@ footer ul {
     }
     footer ul {
         display: grid;
-        grid-template-columns: repeat(2, auto);
+      
         justify-content: center;
         column-gap: 2rem;
         row-gap: 0.8rem;
@@ -985,8 +1038,16 @@ footer ul {
         justify-content: center;
        
     }
-
+ }
+ 
+@media (max-width: 730px) {
+    .footercorr2 p {
+        font-size: 1.rem;
     }
+    .footer-correo2 {
+        font-size: 1.2rem;
+    }
+}
 @media (max-width: 677px) {
     .ramtern {
         margin-top:4.4rem;
@@ -1023,6 +1084,12 @@ footer ul {
 }
 
 @media (max-width: 600px) {
+    #menu > ul {
+    justify-content: space-between;
+}
+.hamburger-li {
+    display: block;
+}
 .menulink {
         display: none;
     }
@@ -1053,6 +1120,7 @@ footer ul {
     visibility: visible;
     transition: transform 0.35s ease, visibility 0s;
 }
+
 .menuhbg-cerrar {
     align-self: flex-start;
     margin: 0;
@@ -1150,7 +1218,10 @@ footer ul {
     .footercorr p {
        max-width: none;
     }
-
+    .modal-img {
+     max-width: 160px; }
+    .modal-nombre { 
+        font-size: 1.2rem; }
 }
 @media (max-width: 430px) {
     .ramtern {
@@ -1167,7 +1238,12 @@ footer ul {
         width: 50%;
     }
 }
-
+@media (max-width: 380px) {
+    .plato-card,
+    .cards.dos-col .plato-card { width: 100%; }
+    .cards,
+    .cards.dos-col { max-width: 280px; }
+}
 @media (max-width: 346px) {
     .ramtern {
         margin-top:2.2rem;
@@ -1175,4 +1251,5 @@ footer ul {
         animation: girar 20s linear infinite;
     }   
 }
+
 
