@@ -67,7 +67,7 @@ body {
     overflow: hidden;
 }
 .logorm {
-    padding-top: 6rem;
+    padding-top: 9rem;
 }
 .plato {
     position: relative;
@@ -247,14 +247,19 @@ body {
     max-width: 750px;
     margin: 5.5rem auto 7rem;
     padding: 0 1rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 
 }
 .chicfid {
     position: absolute;
-    width: 1660px;
+    width: max(1660px, calc(100vw + 24.5rem));
     left: -24.5rem;
     top: 7rem;
+}
+.chicfid img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
  /* maquetacion slideshow */
 .carrusel {
@@ -349,7 +354,7 @@ body {
     padding: 1.2rem 2rem;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
     z-index: 9999;
-    display: none; /* Por defecto está oculto hasta que JS verifique si ya aceptó */
+    display: none;
     font-family: 'Inter', sans-serif;
 }
 
@@ -372,7 +377,7 @@ body {
 }
 
 .cookie-content a {
-    color: #ffcb9b; /* O el color crema de tu web */
+    color: #ffcb9b; 
     text-decoration: underline;
 }
 
@@ -396,7 +401,7 @@ body {
 }
 
 .cookie-btn-aceptar {
-    background-color: #c30124; /* El rojo de tu web (var(--colorfondo)) */
+    background-color: #c30124; 
     color: #ffffff;
 }
 
@@ -414,17 +419,8 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Responsivo para móviles */
-@media (max-width: 768px) {
-    .cookie-content {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 1rem;
-    }
-    .cookie-buttons {
-        justify-content: flex-end;
-    }
-}
+
+
 
 /* MAQUETACION PLATOS */
 #platosnom {
@@ -959,6 +955,16 @@ footer ul {
     margin: 0 auto;
     width: 90%;
 }
+}
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+    .cookie-buttons {
+        justify-content: flex-end;
+    }
 }
 @media (max-width: 750px) {
 .fondond {
