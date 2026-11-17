@@ -53,7 +53,7 @@
         })
     }
 
-    document.querySelectorAll("menuhbg a").forEach(function (enlace) {
+    document.querySelectorAll(".menuhbg a").forEach(function (enlace) {
         enlace.addEventListener("click", function () {
             menu.classList.remove("active")
         })
@@ -71,10 +71,10 @@
         { nombre: "Sake",          categoria: "Bebidas",   imagen: "img/tarjbeb1.png", precio: "5.00€", descripcion: "Bebida alchólica tradicional conseguida mediante la fermentación de arroz." },
         { nombre: "Cerveza",       categoria: "Bebidas",   imagen: "img/tarjbeb2.png",  precio: "3.50€", descripcion: "Cerveza fría embotellada de 300ml." },
         { nombre: "Refrescos",     categoria: "Bebidas",   imagen: "img/tarjbeb3.png", precio: "2.50€", descripcion: "Botella de refresco a elegir entre Cocacola, Nestea o Aquarius." },
-        { nombre: "Agua",          categoria: "Bebidas",   imagen: "img/tarjbeb4.png", precio: "2.00€", descripcion: "Botella de agua fresca natural de ." },
-        { nombre: "Dorayaki",      categoria: "Postres",   imagen: "img/tarjpos1.png", precio: "4.50€", descripcion: "Bolitas de pulpo con salsa especial." },
-        { nombre: "Dango",         categoria: "Postres",   imagen: "img/tarjpos2.png", precio: "4.00€", descripcion: "Bolitas de pulpo con salsa especial." },
-        { nombre: "Taiyaki",       categoria: "Postres",   imagen: "img/tarjpos4.png", precio: "4.90€", descripcion: "Bolitas de pulpo con salsa especial." },
+        { nombre: "Agua",          categoria: "Bebidas",   imagen: "img/tarjbeb4.png", precio: "2.00€", descripcion: "Botella de agua fresca natural de 350ml." },
+        { nombre: "Dorayaki",      categoria: "Postres",   imagen: "img/tarjpos1.png", precio: "4.50€", descripcion: "Un bizcocho esponsojo y redondo relleno de chocolate, nata , o pasta dulce de judías." },
+        { nombre: "Dango",         categoria: "Postres",   imagen: "img/tarjpos2.png", precio: "4.00€", descripcion: "Pastel japonés hecho con harina de arroz, muy parecido al mochi, pinchado con un palo y mojados en té verde." },
+        { nombre: "Taiyaki",       categoria: "Postres",   imagen: "img/tarjpos4.png", precio: "4.90€", descripcion: "Pastel japonés en forma de pez relleno tradicionalmente con pasta de judías rojas." },
         { nombre: "Mochi",         categoria: "Postres",   imagen: "img/tarjpos3.png", precio: "4.50€", descripcion: "Pastel japonés hecho con harina de arroz y rellenos de una pasta dulce de coco." },
     ];
     var contenedor = document.querySelector("#cards")

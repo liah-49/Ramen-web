@@ -12,7 +12,7 @@ body {
     background-color:#000 ;
     color: white;
    overflow-x: clip;
-   font-family:Inter;
+   font-family:Inter, sans-serif;
 }
 /* MAQUETACIÓN MENU NAV  */
 #menu {
@@ -79,9 +79,6 @@ body {
 .hamburger-li {
     display: none;
 }
-.hamburger-li {
-    display: none;
-}
 .menuhbg {
     display: none;
 }
@@ -140,8 +137,7 @@ body {
     padding-bottom: 4rem;
     text-align: center;
     font-size: 1.8rem;
-    font-size: 1.8rem;
-  
+
 }
 .boton {
     background-color: var(--crema);
@@ -153,8 +149,6 @@ body {
     align-self: center;
     font-weight: bold;
     font-size: 1.6rem;
-    font-size: 1.6rem;
-
    
 }
 .boton {
@@ -258,14 +252,7 @@ body {
     padding-top: 6rem;
 
 }
-.titulomenu img {
-    
-    display: block;
-    width: 10%;
-    max-width: 250px;
-    margin: 0 auto;
 
-}
 #carta p {
     
     max-width: 750px;
@@ -351,7 +338,7 @@ body {
 .flechder { right: 0% }
 
 .flechder:hover {transform: translateX(-5px); }
-.flechizq:hover {transform: translateY(v 5px); }
+.flechizq:hover {transform: translateY( 5px); }
 .info {
     margin-top: 70px;
     text-align: center;
@@ -626,7 +613,7 @@ body {
 footer {
     position: relative;
     overflow: hidden;
-    
+    background-color: var(--colorfondo);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -642,7 +629,7 @@ footer {
     gap: 1rem;
 }
 footer h3 {
-    font-family:Inter ;
+    font-family:Inter, sans-serif ;
     font-size: 1.4rem;
 }
 footer li a {
@@ -665,14 +652,14 @@ footer ul {
   
 }
 .footercorr p {
-  font-family:Inter ;
+  font-family:Inter, sans-serif ;
   font-size: 1.8rem;
   line-height: 1.3;
     text-align: center;
     max-width: 15rem;
 }
 .footer-correo {
-    font-family: Anton, sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 1.8rem;
     padding: 1rem 2rem;
     background-color: #000;
@@ -701,7 +688,7 @@ footer ul {
     gap: 1rem;
 }
 #footer2 h3 {
-    font-family:Inter ;
+    font-family:Inter, sans-serif ;
     font-size: 1.4rem;
 }
 #footer2 li a {
@@ -723,14 +710,14 @@ footer ul {
     gap: 3rem;
 }
 .footercorr2 p {
-  font-family:Inter ;
+  font-family:Inter, sans-serif ;
   font-size: 1.8rem;
   line-height: 1.3;
     text-align: center;
     max-width: 15rem;
 }
 .footer-correo2 {
-    font-family: Anton, sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 1.8rem;
     padding: 1rem 2rem;
     background-color:var(--colorfondo);
@@ -743,12 +730,16 @@ footer ul {
 
 
 /* MEDIA QUERIES  */
+@media (hover: none) {
+    .imgraton { display: none; }
+}
 @media (max-width: 1213px) {
  .ramtern {
     margin-top: 6rem;
     margin-left: 0.4rem;
     animation: girar 20s linear infinite;
   }
+ 
 }
 @media (max-width: 1177px) {
 .chicfid {
@@ -941,16 +932,16 @@ footer ul {
         font-size: 1.2rem;
     }
      .footercorr2 p {
-        font-size: 1.3rem 
+        font-size: 1.3rem; 
     }
 }   
 
 @media (max-width: 782px) {
-     .texto, .texto1, .texto2, .texto3 {
- flex: 1;
- max-width: 290px;
- font-size: 1.1rem;
- text-align: center;
+ .texto, .texto1, .texto2, .texto3 {
+    flex: 1;
+    max-width: 290px;
+    font-size: 1.1rem;
+    text-align: center;
 
 
 }
@@ -1050,6 +1041,12 @@ footer ul {
    margin-left: 4rem;
 }
 }
+@media (max-width: 730px) {
+
+    .footer-correo2 {
+        font-size: 1.2rem;
+    }
+}
 @media (max-width: 704px) {
     footer {
         flex-wrap: wrap;
@@ -1079,14 +1076,7 @@ footer ul {
     }
  }
  
-@media (max-width: 730px) {
-    .footercorr2 p {
-        font-size: 1.rem;
-    }
-    .footer-correo2 {
-        font-size: 1.2rem;
-    }
-}
+
 @media (max-width: 677px) {
     .ramtern {
         margin-top:4.4rem;
@@ -1257,8 +1247,7 @@ footer ul {
     .footercorr p {
        max-width: none;
     }
-  .cards { max-width: 300px; }
-    .plato-card { width: 100%; }    .modal-img {
+    .modal-img {
      max-width: 160px; }
     .modal-nombre { 
         font-size: 1.2rem; }
