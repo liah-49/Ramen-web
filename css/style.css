@@ -79,6 +79,9 @@ body {
 .hamburger-li {
     display: none;
 }
+.hamburger-li {
+    display: none;
+}
 .menuhbg {
     display: none;
 }
@@ -109,8 +112,7 @@ body {
 .plato img {
     display: block;
     width: 200%;
-    top: -80px;
-   
+    top: -80px; 
 }
 
 .fondorm,
@@ -138,6 +140,7 @@ body {
     padding-bottom: 4rem;
     text-align: center;
     font-size: 1.8rem;
+    font-size: 1.8rem;
   
 }
 .boton {
@@ -150,6 +153,7 @@ body {
     align-self: center;
     font-weight: bold;
     font-size: 1.6rem;
+    font-size: 1.6rem;
 
    
 }
@@ -159,8 +163,6 @@ body {
     margin: 0 auto;
     
 }
-
-
 
 /* MAQUETACION NOVEDADES  */
 #novedades {
@@ -184,6 +186,7 @@ body {
     z-index: 1;
     justify-content: space-between;
     gap: 1rem;
+    
 }
 .textoimagen1, .textoimagen3 {
     flex-direction: row;
@@ -218,6 +221,7 @@ body {
 .figura img, .figura1 img, .figura2 img, .figura3 img {
    display: block;
    width: 80%;
+   animation: girar 20s linear infinite;
 }
 
 .figura1 img, .figura3 img {
@@ -237,12 +241,6 @@ body {
 .texto1, .texto3 {
     color: black;
   
-}
-.figura img,
-.figura1 img,
-.figura2 img,
-.figura3 img {
-    animation: girar 20s linear infinite;
 }
 
 @keyframes girar {
@@ -628,7 +626,7 @@ body {
 footer {
     position: relative;
     overflow: hidden;
-    background-color: var(--colorfondo);
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -637,6 +635,7 @@ footer {
     
 }
 .footercol {
+   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -657,12 +656,13 @@ footer ul {
     flex-direction: column;
     align-items: center;
     gap: 0.8rem;
-    
+  
 }
 .footercorr {
     display: flex;
     align-items: center;
     gap: 3rem;
+  
 }
 .footercorr p {
   font-family:Inter ;
@@ -755,7 +755,7 @@ footer ul {
     position: absolute;
     width: 1555px;
     left: -23rem;
-    top: 7rem;
+    top: 9rem;
     }
 }
 @media (max-width: 1136px) {
@@ -780,6 +780,7 @@ footer ul {
     .logorm {
             display: block;
             width: 90%;
+            padding-top: 8rem;
             padding-top: 8rem;
         }
 
@@ -935,6 +936,12 @@ footer ul {
       footer ul a {
         font-size: 1rem;
         max-width: 500px;
+    }
+    .footer-correo2   {
+        font-size: 1.2rem;
+    }
+     .footercorr2 p {
+        font-size: 1.3rem 
     }
 }   
 
@@ -1250,7 +1257,8 @@ footer ul {
     .footercorr p {
        max-width: none;
     }
-    .modal-img {
+  .cards { max-width: 300px; }
+    .plato-card { width: 100%; }    .modal-img {
      max-width: 160px; }
     .modal-nombre { 
         font-size: 1.2rem; }
