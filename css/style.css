@@ -43,6 +43,32 @@ body {
     display: block;
  
 }
+.shiromenu {
+    cursor: pointer;
+    animation: vuelta 1s ease-in-out;
+}
+.shiromenu {
+    cursor: pointer;
+}
+.shiromenu.girando img {
+    animation: vuelta 1s ease-in-out;
+}
+@keyframes vuelta {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(720deg); }
+}
+.imgraton {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: auto;
+    pointer-events: none;
+    user-select: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
 .hamburger {
     display: none;
     background: none;

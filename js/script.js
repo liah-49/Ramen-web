@@ -191,3 +191,37 @@ if (cookieBanner) {
     if (cookieAccept) cookieAccept.addEventListener("click", cerrarBanner);
     if (cookieReject) cookieReject.addEventListener("click", cerrarBanner);
 }
+
+var logoMenu = document.querySelector(".shiromenu");
+
+if (logoMenu) {
+    logoMenu.addEventListener("click", function (e) {
+        var enlace = logoMenu.querySelector("a");
+        var destino = enlace ? enlace.getAttribute("href") : null;
+
+        if (destino && destino.indexOf("#") !== 0) {
+            e.preventDefault();
+            setTimeout(function () {
+                window.location.href = destino;
+            }, 1000);
+        }
+
+        logoMenu.classList.remove("girando");
+        void logoMenu.offsetWidth; 
+        logoMenu.classList.add("girando");
+    });
+
+    logoMenu.addEventListener("animationend", function () {
+        logoMenu.classList.remove("girando");
+    });
+}
+
+const el = document.querySelector(".imgraton");
+
+const xTo = gsap.quickTo(el, "x", { duration: 0.3, ease: "power3.out" });
+const yTo = gsap.quickTo(el, "y", { duration: 0.3, ease: "power3.out" });
+
+window.addEventListener("mousemove", (e) => {
+  xTo(e.clientX);
+  yTo(e.clientY);
+});
